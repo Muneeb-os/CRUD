@@ -1,13 +1,614 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.navcontainer {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 0px 10px;
+}
+.navcontainer h1 {
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.navcontainer ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  margin-right: 20px;
+  font-weight: 500;
+
+}
+
+.navcontainer ul li {
+  margin: 0px 10px;
+}
+.navcontainer ul li a {
+  color:white;
+  text-decoration: none;
+}
+.navcontainer ul li a:hover {
+  text-decoration: underline;
+}
+.navcontainer input {
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.main {
+  position: relative;
+  display: flex;
+  background-color: rgb(227, 225, 225);
+  width: 90%;
+  margin: 10px 60px;
+}
+.tophead {
+  display: flex;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 80px;
+  margin-left: 35%;
+  word-spacing: 5px;
+}
+.newscontainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px;
+  height: 410px;
+  width: 100%;
+  border: 1px solid rgb(227, 225, 225);
+}
+.newscontainer img {
+  width: 100%;
+  height: 270px;
+}
+.newscontainer .deta {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.newscontainer .deta h5 {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.newscontainer .deta p {
+  margin-top: -10px;
+  margin-left: 5px;
+}
+.newscontainer .deta a {
+  margin-left: 5px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  padding: 3px 5px;
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+}
+.fot {
+  height: 100px;
+  width: 100%;
+  background-color:cadetblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fot h5 {
+  word-spacing: 5px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.conn2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 220px;
+}
+.conn2 button {
+  cursor: pointer;
+  height: 30px;
+  border-radius: 5px;
+  padding: 3px 5px;
+  color: white;
+  background-color: blue;
+  border: none;
+}
+.spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.spin img{
+  border-radius:100%;
+  background-color: white;
+}
+.tableheading{
+  color: black;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.studenttable{
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+
+.frmstubyid ul{
+  list-style: none;
+}
+.frmstubyid .mrgin{
+  padding: 117px 0px;
+}
+.addstu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}  
+.addstu h4{
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.addstu .addinput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 8px;
+}
+.addstu .addinput input{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 14px;
+}
+.addinput label{
+  margin-left: 5px;
+  font-size: 15px;
+}
+.addstu button{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 45px;
+  text-transform: uppercase;
+  font-size:10px;
+  font-weight:bold;
+  transition: 0.5s;
+}
+.addstu button:hover{
+  background-color: rgb(227, 225, 225);
+}
+
+.frmstubyremove h4{
+  text-transform: uppercase;
+}
+.frmstubyremove .frmremove{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frmstubyremove .mrgin{
+  padding: 117px 0px;
+}
+
+.updaterecord .uprecordfield{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:start;
+}
+.uprecordfield label{
+  margin-left: 5px;
+  font-size: 15px;
+}
+.updaterecord .uprecordfield button{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin: 10px 59px;
+  text-transform: uppercase;
+  font-size:10px;
+  font-weight:bold;
+  transition: 0.5s;
+}
+.updaterecord .uprecordfield button:hover{
+  background-color: rgb(227, 225, 225);
+}
+.mainbox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainbox .textarea{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: darkcyan;
+}
+.textarea h3{
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  margin-top: 140px;
+  word-spacing: 3px;
+}
+.mainbox .list{
+  margin-bottom: 250px;
+  margin-left: 80px;
+  margin-right: 125px;
+}
+.textarea ul{
+  list-style: none;
+  color: white;
+}
+.list ul li{
+  padding: 5px 0px;
+  font-size: 15px;
+}
+.list ul li .line{
+  margin-top: 30px;
+  height: 7px;
+  width: 130px;
+  background-color: white;
+  border-radius: 50px;
+  margin-left: 110px;
+}
+.mainbox .frmstubyid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color:white;
+}
+.mainbox .frmstubyid h4{
+  text-transform: uppercase;
+  color:darkcyan;
+  cursor: pointer;
+  word-spacing: 3px;
+  border-bottom: 2px solid darkcyan;
+  border-radius: 5px;
+}
+.frmstubyid .input{
+  margin: 10px 0px;
+  border: 1px solid darkcyan;
+  color: darkcyan;
+  border-radius: 10px;
+  padding: 5px 8px;
+}
+.frmstubyid button{
+  background-color:darkcyan;
+  border: 2px solid darkcyan;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  text-transform: uppercase;
+  font-size:10px;
+  font-weight:bold;
+  transition: 0.5s;
+}
+.frmstubyid button:hover{
+  background-color:white;
+  color: darkcyan;
+}
+.frmstubyid .txtline{
+  height: 6px;
+  width: 170px;
+  background-color: darkcyan;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.frmstubyid .showdata{
+  background-color: darkcyan;
+  color: white;
+  border-radius: 10px;
+}
+.showdata li{
+  padding-right: 20px;
+}
+.Deletdata{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-content: center;
+}
+.Deletdata .mrgin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: darkcyan;
+}
+.mrgin h3{
+  margin-top: 140px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  word-spacing: 3px;
+}
+.mrgin .ullist{
+  color: white;
+  margin-bottom: 110px;
+  margin-left: 80px;
+  margin-right:110px;
+}
+.mrgin .ullist ul{
+  list-style: none;
+}
+.mrgin .ullist ul li h5{
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mrgin .ullist ul li p{
+  font-size: 15px;
+}
+.mrgin .ullist ul li .delline{
+  height: 7px;
+  width: 130px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 110px;
+}
+.frmstubyremove{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+}
+.frmstubyremove h4{
+  color: darkcyan;
+  cursor: pointer;
+  margin-top: -70px;
+  border-bottom:2px solid darkcyan;
+  border-radius: 10px;
+}
+.frmstubyremove .frmremove input{
+  border: 1px solid darkcyan;
+  color: darkcyan;
+  border-radius: 10px;
+  padding: 5px 8px;
+  margin: 10px 0px;
+}
+.frmstubyremove .frmremove button{
+  background-color:darkcyan;
+  border: 1px solid darkcyan;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  text-transform: uppercase;
+  font-size:10px;
+  font-weight:bold;
+  transition: 0.5s;
+}
+.frmstubyremove .frmremove button:hover{
+  background-color: white;
+  color: darkcyan;
+}
+.frmstubyremove .btnline{
+  height: 7px;
+  width: 180px;
+  background-color: darkcyan;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.admain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.admain .addtext{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: darkcyan;
+}
+.admain .addtext h3{
+  color: white;
+  text-transform: uppercase;
+  margin-top: 90px;
+  cursor: pointer;
+}
+.admain .addtext .addlist{
+  color: white;
+  margin-left: 80px;
+  margin-right: 110px;
+  margin-top: -50px;
+}
+.admain .addtext .addlist ul{
+  list-style: none;
+}
+.admain .addtext .addlist ul h5{
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.admain .addstudent{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  height:100vh;
+  width: 50%;
+  background-color: white;
+}
+.admain .addstudent h4{
+  margin-top: 100px;
+  margin-left: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 2px solid darkcyan;
+  border-radius: 5px;
+  color: darkcyan;
+}
+.admain .addstudent .field{
+  margin-bottom: 60px;
+  padding: 3px 30px;
+}
+.admain .addstudent .addinput{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+}
+.admain .addstudent label{
+  color: darkcyan;
+}
+.admain .addstudent input{
+  width: 130%;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  color: darkcyan;
+  padding: 4px 4px;
+}
+.admain .addstudent .field button{
+  margin-top: 10px;
+  width: 135%;
+  padding: 10px 0px;
+  text-transform: uppercase;
+  border: 2px solid  darkcyan;
+  border-radius: 20px;
+  background-color: darkcyan;
+  color: white;
+}
+.admain .addstudent .field button:hover{
+  background-color: white;
+  color: darkcyan;
+}
+.admain .addstudent .field .clr{
+  color: darkcyan;
+}
+.maindiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maindiv .updatetext{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color: darkcyan;
+}
+.maindiv .updaterecord{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+  background-color:white;
+}
+.maindiv .updaterecord h4{
+  margin-left: 75px;
+  margin-top: 80px;
+  text-transform: uppercase;
+  color: darkcyan;
+  border-bottom: 2px solid darkcyan;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.maindiv .updaterecord .uprecordfield{
+  color: darkcyan;
+}
+.maindiv .updaterecord .uprecordfield input{
+  margin-bottom:5px;
+  width: 130%;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  padding: 3px 5px;
+  color: darkcyan;
+}
+.maindiv .updaterecord  button{
+  width: 50%;
+  margin-left: 90px;
+  background-color: darkcyan;
+  color: white;
+  border: 2px solid darkcyan;
+}
+.maindiv .updaterecord  button:hover{
+  background-color: white;
+  color: darkcyan;
+}
+.maindiv .updatetext h3{
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 70px;
+}
+.maindiv .uplist {
+  color: white;
+  margin-left:80px;
+  margin-right: 110px;
+  margin-bottom: 40px;
+}
+.maindiv .uplist ul{
+list-style: none;
+margin-top: -50px;
+}
+.maindiv .uplist ul li h5{
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.mainallrecord{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: darkcyan;
+}
+.mainallrecord .tbl{
+  margin: 70px 20px;
+   color: darkcyan;
+}
+.mainallrecord .tbl h3{
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 40%;
+}
+.mainallrecord .tbl .studenttable{
+  background-color: white;
+}
+
+
