@@ -8,7 +8,7 @@ function NavBar(props) {
         <h1>{props.title}</h1>
         <ul>
           <li>
-          <Link to="/">{props.liitemHO}</Link>
+          <Link to="all-student-data">{props.liitemHO}</Link>
           </li>
           <li>
             <Link to="get-by-id">{props.liitemE}</Link>

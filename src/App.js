@@ -23,7 +23,7 @@ const App = () => {
      <NavBar title="Student Record Management System" liitemHO="All" liitemE="Get By Id" liitemB="Add Student" liitemH="Remove Student" liitemS="Update Student"/>
      <LoadingBar color="#ff0000" progress={progress} />
      <Routes>
-      <Route path="/" element={
+      <Route path="/all-student-data" element={
        <StudentRecord  setProgress={updateProgress}/>
       }/>
     <Route path="/get-by-id" element={
